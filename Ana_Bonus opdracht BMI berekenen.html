@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		let gewicht = prompt("Welke is jouw gewicth?");
+
+		if (gewicht == null)
+		{document.write("U heeft geannuleerd!");}
+		
+		else if (gewicht.length == 0) 
+		{document.write("U heeft niets ingegeven!");}
+
+		else {console.log(`${gewicht}`)}
+
+		
+		let lengte = prompt("Welke is jouw lengte?")
+
+		if (lengte == null)
+			{document.write("U heeft geannuleerd!");}
+
+		else if (lengte == 0) {document.write("U heeft niets ingegeven!");}
+
+		else {console.log(`${lengte}`);}
+
+		let bmi = gewicht/(lengte*lengte);
+
+		if (bmi < 18.5) {document.write(`Uw BMI is ${bmi.toFixed(1)}, dus kleiner is dan 18.5, dit betekent dat u een ondergewicht heeft`);}
+
+		else if (bmi >= 18.5 && bmi < 25) {document.write(`Uw BMI is ${bmi.toFixed(1)}, dus dus tussen 18.5 en 25, dit betekent dat u een gezond gewicht heeft`);}
+
+		else if (bmi >= 25 && bmi < 30) {document.write(`Uw BMI is ${bmi.toFixed(1)}, dus dus tussen 25 en 30, dit betekent dat u een overgewicht heeft`);}
+		
+		else {document.write(`Uw BMI is ${bmi.toFixed(1)}, dus dus groter dan 30, dat betekent dat u een obesitas heeft`);}
+
+
+	</script>
+	
+</body>
+</html>
